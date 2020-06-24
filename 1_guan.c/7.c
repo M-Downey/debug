@@ -15,19 +15,19 @@ int main()
 
 double bisection(int p, int q, double (*func)(int, int, double))
 {
-    double left,right,mid;
-    left=-20;
-    right=20;
-    mid=(left+right)/2;
+    double left, right, mid;
+    left = -20;
+    right = 20;
+    mid = ( left + right ) / 2;
     
-    while(fabs(func(p,q,mid))>EPSILON){
+    while(fabs( func(p, q, mid) ) > EPSILON){
         if(func(p,q,left) * func(p,q,mid)<=0){
-            right=mid;
+            right = mid;
         }
         else{
-            left=mid;
+            left = mid;
         }
-        mid=(left+right)/2.0;
+        mid = (left + right) / 2;
     }
     
     return mid;

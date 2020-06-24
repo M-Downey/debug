@@ -16,24 +16,24 @@ int main()
 
 double bisection(int p, int q, double (*func)(int, int, double)) 
 {
-    double a = -20;
-    double b = 20;
-    double m=( a + b ) / 2;
+    double left = -20;
+    double right = 20;
+    double mid=( left + right ) / 2;
     
-    while(fabs(func(p,q,m)) > EPSILON){
+    while(fabs(func(p,q,mid)) > EPSILON){
     	
-        if(func(p,q,m) * func(p,q,a) <= 0){
-            b = m;
+        if(func(p,q,mid) * func(p,q,left) <= 0){
+            right = mid;
         }
         else{
-			if(func(p,q,m) * func(p,q,b) < 0){
-                a = m;
+			if(func(p,q,mid) * func(p,q,right) < 0){
+                left = mid;
             }
         }
         
-        m=( a + b ) / 2;
+        mid=( left + right ) / 2;
     }
-    return m;
+    return mid;
 }
 
 double f(int p, int q, double x) 

@@ -21,10 +21,10 @@ double bisection(int p, int q, double (*func)(int, int, double))
     double func_left, func_right, func_mid;
     
     do {
-        func_left = func(p, q, a);
-        func_right = func(p, q, b);
-        mid = (left + right) / 2.0;
-        func_mid = func(p, q, x);
+        func_left = func(p, q, left);
+        func_right = func(p, q, right);
+        mid = (left + right) / 2;
+        func_mid = func(p, q, mid);
         
         if (func_left * func_mid >= 0) {
             left = mid;

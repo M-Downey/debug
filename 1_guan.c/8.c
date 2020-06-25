@@ -15,26 +15,26 @@ int main()
 
 double bisection(int p, int q, double (*func)(int, int, double)) 
 {
-    double a = -20.0;
-    double b = 20.0;
-    double x = 0.0;
-    double fa, fb, fx;
+    double left = -20.0;
+    double right = 20.0;
+    double mid = 0.0;
+    double func_left, func_right, func_mid;
     
     do {
-        fa = f(p, q, a);
-        fb = f(p, q, b);
-        x = (a + b) / 2.0;
-        fx = f(p, q, x);
+        func_left = func(p, q, left);
+        func_right = func(p, q, right);
+        mid = (left + right) / 2;
+        func_mid = func(p, q, mid);
         
-        if (fa * fx >= 0) {
-            a = x;
+        if (func_left * func_mid >= 0) {
+            left = mid;
         } 
-		else{
-            b = x;
+	else{
+            right = mid;
         }
-    } while (fabs(fx) > EPSILON);
+    } while (fabs(func_mid) > EPSILON);
     
-    return x;
+    return mid;
 }
 
 double f(int p, int q, double x) 

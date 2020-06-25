@@ -15,22 +15,22 @@ int main()
 
 double bisection(int p, int q, double (*func)(int, int, double))
 {
-    double a,b,c;
-    a=-20;
-    b=20;
-    c=(a+b)/2;
+    double left, right, mid;
+    left = -20;
+    right = 20;
+    mid = ( left + right ) / 2;
     
-    while(fabs(f(p,q,c))>EPSILON){
-        if(f(p,q,a)*f(p,q,c)<=0){
-            b=c;
+    while(fabs( func(p, q, mid) ) > EPSILON){
+        if(func(p,q,left) * func(p,q,mid)<=0){
+            right = mid;
         }
         else{
-            a=c;
+            left = mid;
         }
-        c=(a+b)/2.0;
+        mid = (left + right) / 2;
     }
     
-    return c;
+    return mid;
 }
 
 double f(int p, int q, double x) 

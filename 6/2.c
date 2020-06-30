@@ -4,8 +4,8 @@
 int main() 
 {
     int r = 0;
-	int w = 0;
-	int x = 0;
+    int w = 0;
+    int x = 0;
     char sign[3];
     char temp[2];
     scanf("%s", sign);
@@ -34,10 +34,10 @@ int main()
         if (strcmp(temp, "-r") == 0) {
             r = 0;
         }
-		if (strcmp(temp, "+w") == 0) {
+	if (strcmp(temp, "+w") == 0) {
             w = 1;
         }
-		if (strcmp(temp, "-w") == 0) {
+	if (strcmp(temp, "-w") == 0) {
             w = 0;
         }
     }

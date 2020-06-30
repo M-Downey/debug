@@ -15,17 +15,17 @@ int main()
         for (i = 0; i < m - 1 - j; i++) {
             if(strcmp(name[i], name[i + 1]) > 0) {
                 for (int k = 0; k < 20; k++) {
-					swap(&name[i][k], &name[i + 1][k]);
-				}
+		    swap(&name[i][k], &name[i + 1][k]);
+		}
             }
         }
     }
     for (i = 0; i < m; i++) {
         if (i != 9) {
-        	printf("%s\n", name[i]);
-		} else {
-			printf("%s", name[i]);
-		}
+            printf("%s\n", name[i]);
+	} else {
+	    printf("%s", name[i]);
+	}
     }
     
     return 0;
@@ -35,5 +35,5 @@ void swap (char *b, char *c) {
     char temp;
     temp = *b;
     *b = *c;
-	*c = temp; 
+    *c = temp; 
 }

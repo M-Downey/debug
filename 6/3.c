@@ -5,7 +5,7 @@ int main()
 {
     int i = 0;
     int counter = 0;
-	char temp[100005][4];
+    char temp[100005][4];
     char name[4];
     int s[3] = {0};
     while (scanf("%s", name) != EOF) {
@@ -49,5 +49,5 @@ int main()
     }
     printf("%d", counter);
     
-	return 0;
+    return 0;
 }

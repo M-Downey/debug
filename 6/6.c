@@ -12,41 +12,41 @@ int main()
     
     while(scanf("%c", &input) != EOF){
     	if(input == '\n'){
-        	continue;
-		}
+            continue;
+	}
 		
         if (input == 'r'){
             r = 1;
         }
-		else if (input == 'w'){
+	else if (input == 'w'){
             w = 1;
         }
-		else if(input == 'x'){
+	else if(input == 'x'){
             x = 1;      
         }
         else if (input == '+'){
-        	scanf("%c", &input);
-	        if (input == 'r'){
-	            r = 1;
-	        }
-			else if (input == 'w'){
-	            w = 1;
-	        }
-			else if(input == 'x'){
-	            x = 1;      
-	        }
+            scanf("%c", &input);
+	    if (input == 'r'){
+	        r = 1;
+	    }
+	    else if (input == 'w'){
+	        w = 1;
+	    }
+	    else if(input == 'x'){
+	        x = 1;      
+	    }
         }
-		else if (input == '-'){
-			scanf("%c", &input);
-	        if (input == 'r'){
-	            r = 0;
-	        }
-			else if (input == 'w'){
-	            w = 0;
-	        }
-			else if(input == 'x'){
-	            x = 0;      
-	        }
+	else if (input == '-'){
+	    scanf("%c", &input);
+	    if (input == 'r'){
+	        r = 0;
+	    }
+	    else if (input == 'w'){
+	        w = 0;
+	    }
+	    else if(input == 'x'){
+	        x = 0;      
+	    }
         }
     }
     

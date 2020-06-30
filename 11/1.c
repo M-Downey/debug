@@ -3,7 +3,7 @@
 
 int main() 
 {
-	int arr[32] = {0};
+    int arr[32] = {0};
     char input[500];
     int bits[32];
     char result[33];
@@ -11,9 +11,9 @@ int main()
     int j = 0;
     while (scanf("%c", &input[i - 1]) != EOF) {
         if (input[i - 1] != '\n') {
-        	arr[i % 32] = arr[i % 32] + (int)input[i - 1];
+            arr[i % 32] = arr[i % 32] + (int)input[i - 1];
     	}
-		i++;
+	    i++;
     }
     printf("a1 = %d a30 = %d\n", arr[1],arr[30]);
     for (j = 0; j <= 31; j++) {

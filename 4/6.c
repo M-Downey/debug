@@ -8,7 +8,7 @@ int main()
     int i, j;
     int tmpt;
 
-    // 读入给定的数字
+    // 露脕脠毛赂酶露篓碌脛脢媒脳脰
     for (i = 0; i < n; i++) {
         scanf("%d", &numbers[i]);
     }
@@ -27,7 +27,7 @@ int main()
         if (m != 9) {
             printf("%d ", numbers[m]);
         }
-		else {
+	else {
             printf("%d", numbers[m]);
         }
     }

@@ -6,7 +6,6 @@ int main() {
     int numbers[10];
     int i,j,k;
 
-    // 读入给定的数字
     for(i = 0; i < 10; i++){
     	scanf("%d", &numbers[i]);
 	}

@@ -28,10 +28,10 @@ int main()
             if (string[i][j] == '\0' && i != 9){
             	printf ("\n", string[i][j]);
                 break;
-			}
-			else if(string[i][j] == '\0' && i == 9){
-				break;
-			}
+	    }
+	    else if(string[i][j] == '\0' && i == 9){
+		break;
+	    }
             else{
                 printf ("%c", string[i][j]);
             }

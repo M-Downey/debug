@@ -26,10 +26,10 @@ int main() {
     
     for(i = 0; i < 10; i++) {
         if ( i != 9) {
-        	printf("%s\n", names[i]);
-		} else {
-			printf("%s", names[i]);
-		}
+            printf("%s\n", names[i]);
+	} else {
+	    printf("%s", names[i]);
+	}
     }
 
     return 0;

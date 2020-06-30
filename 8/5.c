@@ -13,8 +13,9 @@ int main() {
    
     strcpy(name_max, name[0]); 
     for (int i = 1; i < n; i++) {
-        if (strlen(name_max) < strlen(name[i]))
+        if (strlen(name_max) < strlen(name[i])) {
             strcpy(name_max, name[i]);
+        }
     }
     printf("%s", name_max);
     

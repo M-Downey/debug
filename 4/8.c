@@ -8,7 +8,6 @@ int main()
     int i;
     int max;
     int inter;
-    // 读入给定的数字
     for (i = 0; i < n; i++) {
         scanf("%d", &numbers[i]);
     }
@@ -30,6 +29,5 @@ int main()
             printf(" ");
         }
     }
-
     return 0;
 }

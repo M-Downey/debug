@@ -23,10 +23,10 @@ int main()
             printf("%d", matrix[k][i]);
             if(k == m - 1 && i == n - 1){
             	return 0;
-			}
-			else{
-				printf(" ");
-			}
+	    }
+	    else{
+		printf(" ");
+	    }
 
         }
         k++;
@@ -35,10 +35,10 @@ int main()
             printf("%d", matrix[i][n - 1]);
             if(l == n - 1 && i == m - 1){
             	return 0;
-			}
-			else{
-				printf(" ");
-			}
+	    }
+	    else{
+	        printf(" ");
+	    }
         }
         n--;
  
@@ -46,10 +46,10 @@ int main()
             printf("%d", matrix[m - 1][i]);
             if(k == m - 1 && i == l){
             	return 0;
-			}
-			else{
-				printf(" ");
-			}
+	    }
+	    else{
+	        printf(" ");
+	    }
         }
         m--;
  
@@ -57,10 +57,10 @@ int main()
             printf("%d", matrix[i][l]);
             if(l == n - 1 && i == k){
             	return 0;
-			}
-			else{
-				printf(" ");
-			}
+	    }
+	    else{
+		printf(" ");
+	    }
         }
         l++;
     }

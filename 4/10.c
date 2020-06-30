@@ -9,7 +9,6 @@ int main()
     int k;
     int j;
     int o;
-    // 读入给定的数字
     for (i = 0; i < n; i++) {
         scanf("%d", &numbers[i]);
     }
@@ -31,7 +30,7 @@ int main()
         if (q == 9) {
             printf("%d", numbers[q]);
         } 
-		else {
+	else {
             printf("%d ", numbers[q]);
         }
     }

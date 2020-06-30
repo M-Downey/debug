@@ -48,7 +48,7 @@ int main()
             s[1] = 1;
         } else if (operation[0] == '+' && operation[1] == 'x' && s[2] == 0) {
             counter += 1; 
-			s[2] = 1;  
+	    s[2] = 1;  
         } else if (operation[0] == '-' && operation[1] == 'r' && s[0] == 1) {
             counter -= 4;
             s[0] = 0;
@@ -60,7 +60,6 @@ int main()
             s[2] = 0;
         }
     }
-    
     printf("%d", counter);
       
     return 0;

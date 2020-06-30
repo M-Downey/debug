@@ -1,69 +1,50 @@
 #include <stdio.h>
 
-int main(){
-    int matrix[100][100];
+int main()
+{
+    int matrix_1[100][100];
+    int matrix_2[100][100];
     int m;
     int n;
-    int i,j;
-    int count=0;
-    int max;
+    int i, j;
     
-    //input m & n & matrix
-    //printf("Enter the row & column of the matrix:");
-	scanf("%d %d",&m,&n);
-	//printf("\nEnter values in the matrix:\n");
-	for(i=0;i<m;i++){
-		for(j=0;j<n;j++){
-			scanf("%d",&matrix[i][j]);
-			if(j<n-1)scanf(" ");
+	scanf("%d %d", &m, &n);
+
+	for(i = 0; i < m; i++){
+		for(j = 0; j < n; j++){
+			scanf("%d", &matrix_1[i][j]);
 		}
 	}
-	max=m*n;
 	
-	//output the first line
-	//printf("\nThe first line of the original matrix is:");
-	for(j=0;j<n;j++){
-		printf("%d ",matrix[0][j]);
-		count++;
-	}
-	//printf("\n");
 		
-	do{	
-		//printf("\nm=%d\nn=%d",m,n);//for debug
-		int matrix_[n][m];//rotate the matrix to -90 degree which becomes matrix_
-		//printf("\nDelete the first line,then rotate the matrix -90 degree.The remaining matrix_ is:\n");
-		for(i=0;i<n;i++){
-			for(j=0;j<m-1;j++){
-				matrix_[i][j]=matrix[j+1][n-1-i];
-				//printf("%d ",matrix_[i][j]);
+	while(m > 0 && n > 0){	
+	    for(j = 0 ; j < n ; j++){
+			printf("%d", matrix_1[0][j]);
+			if(m == 1 && j == n - 1){
+				return 0;
 			}
-			//printf("\n");
+			else{
+				printf(" ");
+			}    
 		}
-		
-		/*if(m==1||n==1){
-			break;
-		}*/
-		//printf("\nThe first line of the rotated matrix_ is:");
-		for(j=0;j<m-1;j++){
-			printf("%d",matrix_[0][j]);
-			count++;
-			if(count<max)printf(" ");
+	    
+		for(i = 0; i < n ; i++){
+			for(j = 0 ; j < m - 1 ; j++){
+				matrix_2[i][j] = matrix_1[j + 1][n - 1 - i];
+			}
 		}
-	
-		//cover original matrix with new matrix_	
-		for(i=0;i<n;i++){
-			for(j=0;j<m;j++){
-				matrix[i][j]=matrix_[i][j];
+		 
+		for(i = 0 ; i < n ; i++){
+			for(j = 0 ; j < m - 1 ; j++){
+				matrix_1[i][j] = matrix_2[i][j];
 			}
 		}
 		
 		int t;
-		t=m;
-		m=n;
-		n=t-1;
-		//m=n;n=m-1; no use t.This is so wrong!!!
-			
-	}while(m>=1&&n>=1);
+		t = m;
+		m = n;
+		n = t - 1;
+	}
 	
-    return 0;
+    return 1;
 }

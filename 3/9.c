@@ -1,12 +1,13 @@
 #include <stdio.h>
 
-int main() {
+int main() 
+{
     int matrix[100][100];
     int m;
     int n;
     int nIndex;
     int mIndex;
-    int matrixpass[110][110];
+    int matrixpass[100][100];
     int orientation = 0;
     int i;
     int j;
@@ -27,13 +28,14 @@ int main() {
     times = 0;
     mIndex = 0;
     nIndex = 0;
-    for(i = 0; i < 110; i++){
-        for(j = 0; j < 110; j++){
+    
+    for(i = 0; i < m; i++){
+        for(j = 0; j < n; j++){
             matrixpass[i][j] = 0;
         }
     }
-    if(times <= m * n){
-        for(i = 0; i < 6; i++){
+    
+    while(m > 0 && n > 0){
         if(orientation % 4 == 0){  //right
             while(matrixpass[mIndex][nIndex] == 0 && nIndex <= l - 1){
                 printf("%d", matrix[mIndex][nIndex]);
@@ -43,10 +45,13 @@ int main() {
                 if(times != m * n){
                     printf(" ");
                 }
+                else{
+                	return 0;
+				} 
             }
             orientation++;
-            mIndex++;
-            nIndex--;  
+            mIndex++; 
+            nIndex--;
         }
         if(orientation % 4 == 1){  //down
             while(matrixpass[mIndex][nIndex] == 0 && mIndex <= k - 1){
@@ -57,10 +62,13 @@ int main() {
                 if(times != m * n){
                     printf(" ");
                 }
+                else{
+                	return 0;
+				} 
             }
             orientation++;
-            mIndex--;
             nIndex--;
+            mIndex--;
         }
         if(orientation % 4 == 2){  //left
             while(matrixpass[mIndex][nIndex] == 0 && nIndex >= p){
@@ -71,10 +79,13 @@ int main() {
                 if(times != m * n){
                     printf(" ");
                 }
+                else{
+                	return 0;
+				} 
             }
             orientation++;
-            mIndex--;
-            nIndex++;  
+            mIndex--; 
+            nIndex++;
         }
         if(orientation % 4 == 3){  //up
             while(matrixpass[mIndex][nIndex] == 0 && mIndex >= p + 1){
@@ -85,15 +96,17 @@ int main() {
                 if(times != m * n){
                     printf(" ");
                 }
+                else{
+                	return 0;
+				} 
             }
             orientation++;
-            mIndex++;
-            nIndex++;  
+            nIndex++; 
+			mIndex++; 
         }
         k--;
         l--;
         p++;
-      }
     }
-    return 0;
+    return 1;
 }

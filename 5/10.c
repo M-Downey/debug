@@ -22,8 +22,8 @@ int main()
     for (i = 0; i < 10; i++) {
         printf("%s", names[i]);
         if(i != 9){
-        	printf("\n");
-		}
+            printf("\n");
+	}
     }
     return 0;
 }

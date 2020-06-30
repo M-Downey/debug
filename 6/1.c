@@ -27,31 +27,31 @@ int main() {
             if (reqrmt[0] == '+' && s[0] == 0) {
             	current += req;
             	s[0] = 1;
-			}
-			if (reqrmt[0] == '-' && s[0] == 1) {
-				current -= req;
-				s[0] = 0;
-			}
+		}
+	    if (reqrmt[0] == '-' && s[0] == 1) {
+		current -= req;
+		s[0] = 0;
+		}
         } else if (reqrmt[1] == 'w') {
             req = 2;
             if (reqrmt[0] == '+' && s[1] == 0) {
             	current += req;
             	s[1] = 1;
-			}
-			if (reqrmt[0] == '-' && s[1] == 1) {
-				current -= req;
-				s[1] = 0;
-			}
+	    }
+	    if (reqrmt[0] == '-' && s[1] == 1) {
+		current -= req;
+		s[1] = 0;
+	    }
         } else {
             req = 1;
             if (reqrmt[0] == '+' && s[2] == 0) {
             	current += req;
             	s[2] = 1;
-			}
-			if (reqrmt[0] == '-' && s[2] == 1) {
-				current -= req;
-				s[2] = 0;
-			}
+		}
+	    if (reqrmt[0] == '-' && s[2] == 1) {
+		current -= req;
+		s[2] = 0;
+	    }
         }
     }
     

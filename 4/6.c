@@ -8,7 +8,6 @@ int main()
     int i, j;
     int tmpt;
 
-    // ¶ÁÈë¸ø¶¨µÄÊý×Ö
     for (i = 0; i < n; i++) {
         scanf("%d", &numbers[i]);
     }

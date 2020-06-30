@@ -1,7 +1,8 @@
 #include <stdio.h>
 
-int main() {
-	int N;
+int main() 
+{
+    int N;
     scanf("%d", &N);
     int step[55];
     int i;

@@ -9,7 +9,7 @@ int main()
     int i = 1;
     while (scanf("%c", &n) != EOF) {
        	if (n == '\n') {
-        	break;
+            break;
     	}
     	int c = (int)n;
         arr[i % 32] += c;

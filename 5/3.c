@@ -11,7 +11,7 @@ void swap(char *a,char *b)
 
 int main() 
 {
-	int i, j;
+    int i, j;
     int k, l;
     char name[10][21];
     char temp;
@@ -23,7 +23,7 @@ int main()
         for (k = 0; k < 9 - j; k++) {
             if (strcmp(name[k], name[k + 1]) >= 0) {
                 for (l = 0; l < 20; l++) {  
-                	swap(&name[k][l], &name[k + 1][l]);   
+                    swap(&name[k][l], &name[k + 1][l]);   
                 }
             }
         }
@@ -32,10 +32,10 @@ int main()
     int m;
     for (m = 0; m < 10; m++) {
         if (m != 9) {
-        	printf("%s\n", name[m]);
-		} else {
-			printf("%s", name[m]);
-		}
+            printf("%s\n", name[m]);
+	} else {
+	    printf("%s", name[m]);
+	}
     } 
     
     return 0;
